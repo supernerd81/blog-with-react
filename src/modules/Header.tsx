@@ -1,10 +1,16 @@
 import '../css/Header.css'
+import {JSX} from "react";
 
-export default function Header() {
+type Props = { buttons: JSX.Element[] }
+
+export default function Header(props: Props) {
     return (<header><div id="menu">
 
-        <button>Home</button>
-        <button>Blog</button>
-        <button>Kontakt</button>
+        {
+            props.buttons.map(element => element)
+        }
+        {/*<button>Home</button>*/}
+        {/*<button>Blog</button>*/}
+        {/*<button>Kontakt</button>*/}
     </div></header>)
 }
